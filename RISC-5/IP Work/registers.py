@@ -4,24 +4,14 @@ class Register:
     def __init__(self):
         for i in range(32):
             self.registers.append(0)
-            self.free_register.append(0)
             
     
-    def check (self, index):
-        return self.free_register[index] == 0
-    
-    def book (self, index):
-        if(self.check(index)):
-            self.free_register[index] = 1
-            return True
-        return False
+    def get_value(self, index):
+        return self.registers[index]
         
-    def update(self, index, value):
+    def write_back(self, index, value):
         self.registers[index] = value
     
-    def make_free(self, index):
-        self.free_register[index] = 0
-        
     def print(self):
         for i in range(32):
             if(self.registers[i] != 0):

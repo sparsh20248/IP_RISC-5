@@ -20,5 +20,3 @@ def string_to_int(string, signed = False):
         if(string[0] == '1'): return -bin_to_string(string[1:], 2)
         else: return bin_to_string(string, 2)
         
-def branch():
-    return 1
